@@ -20,16 +20,15 @@ The original library is great, but dated. This the process I had to follow to ge
 
   * change vars in `app.py`
   * ```
-BACKGROUND_COLOR = "black"
-FONT_COLOR = "white"
-FONTSIZE = 1
-BOLDNESS = 2
-
-ASCII = 1
-FILTER = 1
-BLOCKS = 1
-
-```
+    BACKGROUND_COLOR = "black"
+    FONT_COLOR = "white"
+    FONTSIZE = 1
+    BOLDNESS = 2
+    
+    ASCII = 1
+    FILTER = 1
+    BLOCKS = 1
+    ```
 
 ## Running
 
