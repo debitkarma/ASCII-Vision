@@ -63,3 +63,46 @@ I'm definitely not the first person to make an ASCII converter, and there were d
 
 * [Ryan Delaney](https://github.com/Vitineth?tab=followers) made an [Image to ASCII Art Generator](https://github.com/Vitineth/ascii-art-generator) from which I used several functions to sort all ASCII characters in order of their density. While he converted to HCL from RGB to encode each pixel as an ASCII character, I just used the grayscale value. His project is really cool, so make sure to check it out!
 * [This blog post](https://www.codespeedy.com/video-streaming-in-tkinter-with-python/) by Satyam Singh Niranjan explained how to display the webcam stream on the tKinter UI in Python.
+
+# How I (DebitKarma) Got This Working
+
+The original library is great, but dated. This the process I had to follow to get things installed and also working correctly. Minimal changes here, though I guess I could try to update stuff...
+
+## Installation
+
+  * `uv venv` to make virtualenv
+  * `uv python pin 3.8` to pin python version
+  * `uv pip install imageio imageio-ffmpeg numpy keyboard numexpr`
+  * get older version of pillow that uses `getsize` method (deprecated in 10)
+    get python dev stuff so older pillow version can be built using python.h
+    `apt install python3-dev`
+  * `uv pip install pillow==9.5.0`
+  * `apt install python3-tk`
+
+## Config
+
+  * edit app.py
+  * find `zoomed` and change it to `normal`
+
+  * change vars in `app.py`
+  * ```
+BACKGROUND_COLOR = "black"
+FONT_COLOR = "white"
+FONTSIZE = 1
+BOLDNESS = 2
+
+ASCII = 1
+FILTER = 1
+BLOCKS = 1
+
+```
+
+## Running
+
+to run:
+
+change to project dir
+
+```sudo su
+source .venv/bin/activate
+python app.py```
