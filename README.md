@@ -105,3 +105,9 @@ change to project dir
 ```sudo su
 source .venv/bin/activate
 python app.py```
+
+## Sources
+
+  * [Deprecation of `getsize` in pillow >= 10](https://github.com/tensorflow/models/issues/11040)
+  * [Missing python.h](https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory)
+
