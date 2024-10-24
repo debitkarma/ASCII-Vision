@@ -102,9 +102,12 @@ to run:
 
 change to project dir
 
-```sudo su
+```
+sudo su
 source .venv/bin/activate
-python app.py```
+python app.py
+```
+
 
 ## Sources
 
