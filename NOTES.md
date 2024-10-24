@@ -1,20 +1,25 @@
 # How I Got This Working
 
-`uv venv` to make virtualenv
-`uv python pin 3.8` to pin python version
-`uv pip install imageio imageio-ffmpeg numpy keyboard numexpr`
-get older version of pillow that uses `getsize` method (deprecated in 10)
-get python dev stuff so older pillow version can be built using python.h
-`apt install python3-dev`
-`uv pip install pillow==9.5.0`
-`apt install python3-tk`
+The original library is great, but dated. This the process I had to follow to get things installed and also working correctly. Minimal changes here, though I guess I could try to update stuff...
 
-edit app.py
+## Installation
 
-find `zoomed` and change it to `normal`
+  * `uv venv` to make virtualenv
+  * `uv python pin 3.8` to pin python version
+  * `uv pip install imageio imageio-ffmpeg numpy keyboard numexpr`
+  * get older version of pillow that uses `getsize` method (deprecated in 10)
+    get python dev stuff so older pillow version can be built using python.h
+    `apt install python3-dev`
+  * `uv pip install pillow==9.5.0`
+  * `apt install python3-tk`
 
-change vars in `app.py`
-```
+## Config
+
+  * edit app.py
+  * find `zoomed` and change it to `normal`
+
+  * change vars in `app.py`
+  * ```
 BACKGROUND_COLOR = "black"
 FONT_COLOR = "white"
 FONTSIZE = 1
@@ -26,7 +31,11 @@ BLOCKS = 1
 
 ```
 
+## Running
+
 to run:
+
+change to project dir
 
 ```sudo su
 source .venv/bin/activate
