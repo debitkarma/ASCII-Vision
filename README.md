@@ -71,15 +71,17 @@ The original library is great, but dated. This the process I had to follow to ge
 ## Installation
 
   * `uv venv` to make virtualenv
-  * `uv python pin 3.8` to pin python version
+  * ~~`uv python pin 3.8` to pin python version~~ Use python 3.12, because your library via package manager's tk will have to match
   * `uv pip install imageio imageio-ffmpeg numpy keyboard numexpr`
   * get older version of pillow that uses `getsize` method (deprecated in 10)
     get python dev stuff so older pillow version can be built using python.h
     `apt install python3-dev`
-  * `uv pip install pillow==9.5.0`
+  * `uv pip install pillow==9.5.0` (do this after you install imageio, because you're downgrading the version of pillow)
   * `apt install python3-tk`
 
 ## Config
+
+#### (Changes have been committed to file already)
 
   * edit app.py
   * find `zoomed` and change it to `normal`
@@ -95,6 +97,17 @@ The original library is great, but dated. This the process I had to follow to ge
     FILTER = 1
     BLOCKS = 1
     ```
+
+  * ```
+    FONTSIZE = 1
+    BOLDNESS = 2
+
+    OR
+
+    FONTSIZE = 2
+    BOLDNESS = 3
+    ```
+    These work great.
 
 ## Running
 

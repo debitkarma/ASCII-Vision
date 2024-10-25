@@ -16,13 +16,13 @@ MIRROR = True
 # Video Stream to use.
 STREAM = "<video0>"
 # Background color of the ASCII stream.
-BACKGROUND_COLOR = "white"
+BACKGROUND_COLOR = "black"
 # Font color used in the ASCII stream. Make sure there's some contrast between the two.
-FONT_COLOR = "black"
+FONT_COLOR = "white"
 # Font size to use with colored/grayscaled ASCII.
-FONTSIZE = 12
+FONTSIZE = 1
 # Boldness to use with colored/grayscaled ASCII.
-BOLDNESS = 1
+BOLDNESS = 2
 # Factor to divide image height and width by. 1 For for original size, 2 for half size, etc...
 FACTOR = 1
 # Characters to use in ASCII.
@@ -32,9 +32,9 @@ CHARS = "@%#*+=-:. "
 FONT = "cour.ttf"
 
 
-ASCII = 0
+ASCII = 1
 FILTER = 0
-BLOCKS = 0
+BLOCKS = 1
 TEXT = 0
 MONO = 0
 MIRROR = 1
@@ -261,7 +261,7 @@ def main():
             image_label.after(1, stream)
 
     stream()
-    root.state("zoomed")
+    root.state("normal")
     root.mainloop()
 
 
